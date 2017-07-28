@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 typedef struct Node {
-    char data;
+    int data;
     struct Node* next;
 } Node;
 
 void print_list(Node* root) {
     while (root) {
-        printf("%c", root->data);
+        printf("%d", root->data);
         root = root->next;
     }
     printf("\n");
@@ -25,10 +25,10 @@ Node* reverse(Node* root) {
 }
 
 int main() {
-    Node d = { 'd', 0 };
-    Node c = { 'c', &d };
-    Node b = { 'b', &c };
-    Node a = { 'a', &b };
+    Node d = { 4, 0 };
+    Node c = { 3, &d };
+    Node b = { 2, &c };
+    Node a = { 1, &b };
 
     Node* root = &a;
     print_list(root);
