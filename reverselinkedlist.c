@@ -30,10 +30,10 @@ int main() {
     Node b = { 2, &c };
     Node a = { 1, &b };
 
-    Node* root = &a;
-    print_list(root);
-    root = reverse(root);
-    print_list(root);
+    Node* head = &a;
+    print_list(head);
+    head = reverse(head);
+    print_list(head);
 
     return 0;
 }
