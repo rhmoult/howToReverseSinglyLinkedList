@@ -5,10 +5,10 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-void print_list(Node* root) {
-    while (root) {
-        printf("%d", root->data);
-        root = root->next;
+void print_list(Node* printNode) {
+    while (printNode) {
+        printf("%d", printNode->data);
+        printNode = printNode->next;
     }
     printf("\n");
 }
